@@ -1,0 +1,413 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* general styling first */
+
+/* styling of all of my h2 elements */
+h2 {
+  color: #fff;
+  font-size: 5rem;
+  font-family: 'Wendy One', sans-serif;
+  text-transform: uppercase;
+}
+
+/* general styling of my p elements */
+p {
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 1rem;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  font-family: 'Libre Caslon Display', serif;
+}
+
+.my-text-bgcolor p {
+  background-color: rgba(156, 154, 154, 0.561);
+  margin-top: 1.5rem;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 6px 10px 10px 15px rgba(156, 154, 154, 0.561);
+}
+
+/* parallax general */
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* now let's set background image to each parallax individually */
+.plx1 {
+  background-image: url('images/4.jpeg'); 
+}
+.plx2 {
+  background-image: url('images/utro3.jpg');
+}
+
+.plx3 {
+  background-image: url('images/1.jpeg');
+  height: 50vh; /*width for #3 is going to be smaller than for the other parallax items*/
+}
+
+.plx4 {
+background-image: url("images/3.jpeg");
+height: 60vh;
+}
+/* we will do parallax 5 later as it is done in a little different way */
+
+/* Let's style background color divs now */
+
+.color-div {
+  height: 75vh;
+  width:100%;
+}
+
+
+
+/* and now we will style each color div individually */
+
+/* 1 */
+.color-div1 {
+  /* inside of this container I will have 2 divs with different colors, let's do left-hand side div first */
+  background-color: rgb(151, 177, 199);
+}
+.color-div1a {
+  /* let's set the color for the right-hand side div */
+  background-color: rgb(184, 202, 188);
+  display: flex; /*for button styling later*/
+}
+
+.content1 h2 {
+  margin-top: 7rem;
+}
+
+.content1 p {
+  text-align: left;
+  margin-left: 2%;
+}
+
+/* 2 */
+.color-div2 {
+  background-color: rgb(132, 168, 160);
+  position: absolute;
+}
+
+.content2 {
+  margin-top: 7rem;
+}
+
+.content2a p {
+  text-align: left;
+}
+
+/* 3 */
+
+/* mt-5 <--- in other words margin top is set to 5 
+w-25 <--- in other words width is equal 25%*/
+.color-div3 {
+  background-color: rgb(39, 62, 82);
+}
+
+.color-div3 p {
+  text-align: left;
+  margin-left: 37%;
+}
+
+/* 4 */
+
+.color-div4 {
+  background-color: rgb(65, 128, 114);
+  height: 70vh;
+}
+
+.color-div4 a {
+ color: #fff;
+ font-size: 2.5rem;
+ padding-left: 1rem;
+}
+
+.color-div4 a:hover {
+  color: rgb(236, 233, 233);
+}
+
+.insta-img img {
+  height: 12rem;
+  width: 19rem;
+}
+
+/* 5 */
+
+.plx5 {
+  background-image: url('images/a1.jpeg');
+  height: 700px;
+  width: 100%;
+  border-right: 200px solid #fff;
+  border-top:700px solid transparent;
+  background-attachment: fixed;
+  margin-bottom: 10rem;
+}
+
+.slanted-div-btn p {
+  color: rgb(112, 129, 143);
+  margin-top: 300px;
+  margin-right: 1%;
+}
+
+/* footer */
+footer p {
+  color: rgb(65, 84, 100);
+  font-weight: bold;
+  margin-top: 8rem;
+}
+
+/* let's style the buttons  */
+
+.color-div1a a, 
+.slanted-div a {
+  padding: .4rem .7rem;
+  display: inline-block;
+  position: relative;
+  font-family: 'Wendy One', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  color:rgb(151, 177, 199);
+  text-shadow: 1px 2px 4px rgb(64, 69, 73);
+  border: 5px solid rgb(151, 177, 199);
+  transition: color 0.3s;
+}
+
+.my-btn:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0; 
+  left:0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  transition: all .3s;
+}
+
+.color-div1a a:hover,
+.slanted-div a:hover {
+  color: rgb(236, 233, 233);
+}
+
+.my-btn:hover:after {
+  border: 5px solid rgb(207, 231, 230);
+  width: calc(110% - 25px);
+  height: calc(110% + 25px);
+}
+
+/* media queries */
+/* tablet size */
+@media (min-width: 768px) and (max-width: 992px) {
+.parallax {
+  height: 85vh;
+}
+img {
+  margin-bottom: 2rem;
+}
+
+.color-div {
+  height: 40vh;
+}
+/* 1 */
+.plx1 img {
+  margin-left: 28%;
+}
+
+/* 2 */
+.plx2 {
+  height: 60vh;
+}
+
+.my-text-bgcolor p {
+  width: 100%!important;
+}
+
+.color-div2 {
+  height: 60vh;
+}
+
+/* 3 */
+.color-div3 {
+  margin-top: -35rem;
+  height: 50vh;
+}
+
+.image3 img {
+  height: 27rem!important;
+  width: 22rem!important;
+  margin-top: 4rem;
+}
+
+.color-div3 p {
+  width: 45%!important;
+  margin-right: 2%;
+  float: right!important;
+}
+
+/* 4 */
+.plx4 {
+  height: 40vh;
+}
+
+.insta-img img {
+  height: 10rem;
+  width: 15rem;
+}
+
+/* 5 */
+.plx5 {
+  background-image: url('images/111.jpeg');
+  height: 300px;
+  border-right: 100px solid #fff;
+  border-top: 200px solid transparent;
+  margin-bottom: 2rem;
+}
+
+.slanted-div-btn p {
+  margin-top: -2rem!important;
+  margin-right: 1%;
+}
+}
+
+/* phone size */
+@media(min-width: 320px) and (max-width: 767px) {
+.parallax {
+  height: 100vh;
+}
+
+img {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1rem!important;
+}
+
+p {
+  padding: 5px;
+  letter-spacing: 2px;
+  font-size: .8rem;
+}
+
+.color-div {
+  height: 60vh;
+}
+
+/* 1 */
+
+.plx1 {
+  height: 120vh;
+}
+
+.plx1 img {
+  margin-left: 7%;
+}
+
+
+.color-div1a a,
+.slanted-div a {
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+.color-div1 h2 {
+  margin-top:  5rem!important;
+}
+
+/* 2 */
+
+.plx2 {
+  height: 90vh;
+}
+
+.my-text-bgcolor p {
+  width: 100%!important;
+}
+
+.color-div2 {
+  height: 120vh;
+}
+
+.content2a h2 {
+  margin-top: 10px!important;
+}
+
+/* 3 */
+.plx3 {
+  height: 150vh;
+}
+
+.color-div3 {
+  margin-top: 0rem;
+  height: 120vh;
+}
+
+.plx3 img {
+  height: 320px!important;
+  width: 345px!important;
+  margin-top: 2rem;
+}
+
+.color-div3 {
+  height: 100vh;
+  padding-top: 7rem;
+  /* padding-bottom: 5rem; */
+}
+
+.color-div3 h2 {
+  margin-top: 10rem!important;
+}
+
+.color-div3 p {
+  width: 100%!important;
+  margin-left: 5px;
+  padding: 20px;
+  position: static;
+  float: none;
+}
+
+/* 4 */
+.plx4 {
+  display: none;
+}
+.color-div4 {
+  height: 170vh;
+  padding: 2rem 0px 2rem 0px;
+}
+
+.insta-img img {
+  height: 10rem;
+  width: 15rem;
+}
+
+/* 5 */
+.plx5 {
+  height: 50vh!important;
+  border-right: 100px solid #fff;
+  border-top: 250px solid transparent;
+  background-color: rgb(160, 185, 136);
+  margin-bottom: 2rem;
+}
+
+.slanted-div-btn p {
+  margin-top: -1rem!important;
+}
+
+}
